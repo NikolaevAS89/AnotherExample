@@ -6,7 +6,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <ImageView
+            android:id="@+id/imgTopPanel"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_panel" />
 
         <Button
             android:id="@+id/bttnAction"
@@ -14,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/button"
             android:backgroundTint="#CC3434"
             android:text="Button"
@@ -39,72 +53,84 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <ImageView
-            android:id="@+id/imgTopPanel"
-            android:layout_width="0dp"
+            android:id="@+id/imgPerson3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/top_panel" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgPerson2"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:srcCompat="@drawable/person3" />
 
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Some"
             android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="@+id/imgTopPanel"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgTopPanel"
             app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:background="@color/black"
             android:padding="8dp"
             android:text="TextView"
             android:textColor="@color/purple_200"
             android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
-            app:layout_constraintEnd_toEndOf="@+id/imgTopPanel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toEndOf="@+id/imgLogo"
-            app:layout_constraintTop_toTopOf="@+id/imgLogo" />
+            app:layout_constraintTop_toTopOf="@+id/imgLogo"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/imgPerson1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPerson2"
             app:layout_constraintEnd_toStartOf="@+id/imgPerson2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/imgPerson2"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/person1" />
 
         <ImageView
             android:id="@+id/imgPerson2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPerson3"
             app:layout_constraintEnd_toStartOf="@+id/imgPerson3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imgPerson1"
+            app:layout_constraintTop_toTopOf="@+id/imgPerson3"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/person2" />
 
         <ImageView
-            android:id="@+id/imgPerson3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/guideline3"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imgProgram2"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProgram3"
+            app:layout_constraintEnd_toStartOf="@+id/imgProgram3"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imgPerson2"
-            app:srcCompat="@drawable/person3" />
+            app:layout_constraintStart_toEndOf="@+id/imgProgram1"
+            app:layout_constraintTop_toTopOf="@+id/imgProgram3"
+            app:srcCompat="@drawable/image2" />
 
         <ImageView
             android:id="@+id/imgProgram1"
@@ -116,20 +142,21 @@
             app:layout_constraintEnd_toStartOf="@+id/imgProgram2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgProgram2"
             app:srcCompat="@drawable/image1" />
 
         <ImageView
-            android:id="@+id/imgProgram2"
+            android:id="@+id/imgProgram4"
             android:layout_width="160dp"
             android:layout_height="90dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:cropToPadding="false"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imgProgram1"
-            app:layout_constraintTop_toTopOf="@+id/guideline3"
-            app:srcCompat="@drawable/image2" />
+            app:layout_constraintStart_toEndOf="@+id/imgProgram3"
+            app:layout_constraintTop_toBottomOf="@+id/imgPerson3"
+            app:srcCompat="@drawable/image4" />
 
         <ImageView
             android:id="@+id/imgProgram3"
@@ -137,24 +164,11 @@
             android:layout_height="90dp"
             android:cropToPadding="false"
             android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/imgProgram4"
             app:layout_constraintEnd_toStartOf="@+id/imgProgram4"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgProgram2"
             app:layout_constraintTop_toTopOf="@+id/imgProgram4"
             app:srcCompat="@drawable/image3" />
-
-        <ImageView
-            android:id="@+id/imgProgram4"
-            android:layout_width="160dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="16dp"
-            android:cropToPadding="false"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imgProgram3"
-            app:layout_constraintTop_toBottomOf="@+id/imgProgram2"
-            app:srcCompat="@drawable/image4" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
